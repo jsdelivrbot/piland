@@ -1,0 +1,15 @@
+config BR2_PACKAGE_LUA_LOVE
+	bool "lua-love"
+	depends on !BR2_STATIC_LIBS BR2_PACKAGE_LUAJIT
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_LIBMODPLUG
+	select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_LIBTHEORA
+	select BR2_PACKAGE_PHYSFS
+	select BR2_PACKAGE_MPG123
+	help
+	  TODO
+
+comment "lua-love needs a toolchain w/ dynamic library"
+	depends on BR2_STATIC_LIBS
