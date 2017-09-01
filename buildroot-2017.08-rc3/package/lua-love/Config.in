@@ -1,6 +1,7 @@
 config BR2_PACKAGE_LUA_LOVE
 	bool "lua-love"
-	depends on !BR2_STATIC_LIBS BR2_PACKAGE_LUAJIT
+	depends on !BR2_STATIC_LIBS
+	depends on BR2_PACKAGE_LUAJIT
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_LIBMODPLUG
