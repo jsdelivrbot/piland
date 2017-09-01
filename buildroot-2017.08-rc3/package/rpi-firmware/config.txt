@@ -15,6 +15,17 @@ disable_overscan=1
 
 # How much memory in MB to assign to the GPU on Pi models having
 # 256, 512 or 1024 MB total memory
-gpu_mem_256=100
-gpu_mem_512=100
-gpu_mem_1024=100
+gpu_mem_256=128
+gpu_mem_512=256
+gpu_mem_1024=512
+
+# Enable sound support (Sound works on the Raspberry Pi with Kernel 4.4 after 
+# adding "dtparam=audio=on" to /boot/config.txt)
+dtparam=audio=on
+
+# Force HDMI mode
+hdmi_drive=2
+
+# CEA mode
+#hdmi_group=1
+#hdmi_mode=4
