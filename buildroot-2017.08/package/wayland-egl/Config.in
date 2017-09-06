@@ -1,0 +1,9 @@
+config BR2_PACKAGE_WAYLAND_EGL
+	bool "wayland-egl"
+	depends on BR2_PACKAGE_WAYLAND
+	depends on BR2_PACKAGE_HAS_LIBEGL
+	select BR2_PACKAGE_HAS_LIBEGL_WAYLAND
+	help
+	  Wayland EGL support.
+
+	  http://wayland.freedesktop.org/
