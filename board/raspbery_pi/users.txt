@@ -1,1 +1,1 @@
-pi 101 pi 101 =raspberry /home/pi /bin/bash adm,audio,input,sudo,users,video,weston-launch,wheel
+pi 101 pi 101 =raspberry /home/pi /bin/ash adm,audio,input,sudo,users,video,weston-launch,wheel
