@@ -1,0 +1,33 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+		echo -n "Expanding the root partition: "
+		BLOCK_DEV="/dev/mmcblk0"
+		PART_NUM="2"
+
+		fdisk "${BLOCK_DEV}" <<-EOF &>/dev/null
+			d
+			$PART_NUM
+			n
+			p
+			$PART_NUM
+
+
+			w
+		EOF
+		echo "done"
+
+		rm -f /etc/init.d/S22expand-rootpart
+
+		reboot -f
+		while true; do :; done
+
+		exit 2
+		;;
+	*)
+		echo "Usage: $0 start" >&2
+		exit 1
+		;;
+esac
+
