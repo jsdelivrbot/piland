@@ -14,5 +14,7 @@ WAYLAND_EGL_INSTALL_TARGET = YES
 
 WAYLAND_EGL_OVERRIDE_SRCDIR = ../wayland-egl
 
+WAYLAND_EGL_DEPENDENCIES = host-pkgconf wayland libegl
+
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))
